@@ -1,0 +1,20 @@
+<!-- <div class="container-fluid"> -->
+    <table class="table mt-3">
+        <thead>
+            <th>Sno</th>
+            <th>Image</th>
+            <th>Category Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categoryList;index as i">
+                <td>{{i+1}}</td> 
+                <td><img src="{{category.image}}" width="150px" height="150px" style="border-radius: 50%;"></td>
+                <td>{{category.name.toUpperCase()}}</td>
+                <td><button class="btn btn-warning">Edit</button></td>
+                <td><button class="btn btn-danger" (click) = "delete(category._id,category.image)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+<!-- </div> -->

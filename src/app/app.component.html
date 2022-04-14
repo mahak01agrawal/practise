@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="!isLoggedIn()" routerLink="signup">Signup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="!isLoggedIn()" routerLink="signin">Signin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="isLoggedIn()" routerLink="add-category">Add Category</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="isLoggedIn()" routerLink="view-category">View Category</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="isLoggedIn()" (click)="signOut()">SignOut</a>
+      </li>
+    </ul>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
